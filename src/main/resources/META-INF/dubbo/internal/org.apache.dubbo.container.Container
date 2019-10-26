@@ -1,0 +1,2 @@
+registry=org.apache.dubbo.monitor.simple.container.RegistryContainer
+jetty-monitor=org.apache.dubbo.monitor.simple.container.JettyContainer

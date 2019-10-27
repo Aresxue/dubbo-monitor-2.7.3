@@ -22,7 +22,7 @@ limitations under the License.
     <artifactId>dubbo-monitor-simple</artifactId>
     <packaging>jar</packaging>
     <version>2.7.3</version>
-    <name>dubbo-monitor-simple</name>
+    <name>dubbo-monitor-2.7.3</name>
     <description>针对dubbo2.7.3服务的监控</description>
 
     <properties>
@@ -30,6 +30,11 @@ limitations under the License.
         <skipTests>true</skipTests>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.6.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
@@ -83,7 +88,7 @@ limitations under the License.
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.14</version>
+            <version>3.4.12</version>
         </dependency>
     </dependencies>
     <build>
@@ -125,6 +130,14 @@ limitations under the License.
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

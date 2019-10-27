@@ -30,12 +30,10 @@ public class UnregisterPageHandler implements PageHandler
     @Override
     public Page handle(URL url) {
         String provider = url.getParameterAndDecoded("provider");
-        System.out.println("provider为: "+ provider);
         if (provider == null || provider.length() == 0) {
             throw new IllegalArgumentException("Please input provider parameter.");
         }
         URL providerUrl = URL.valueOf(provider);
-        System.out.println("providerUrl为: "+ providerUrl);
         RegistryContainer.getInstance().getRegistry().unregister(providerUrl);
         String parameter;
         if (url.hasParameter("service")) {

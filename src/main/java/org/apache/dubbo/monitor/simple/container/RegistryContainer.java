@@ -250,7 +250,7 @@ public class RegistryContainer implements Container
         {
             throw new IllegalArgumentException("Please set java start argument: -D" + REGISTRY_ADDRESS + "=zookeeper://127.0.0.1:2181");
         }
-        System.out.println("url为: " + url);
+
         registry = (RegistryService) SpringContainer.getContext().getBean("registryService");
         URL subscribeUrl = new URL(Constants.ADMIN_PROTOCOL, NetUtils.getLocalHost(), 0, "", Constants.INTERFACE_KEY, Constants.ANY_VALUE, Constants.GROUP_KEY, Constants.ANY_VALUE, Constants.VERSION_KEY, Constants.ANY_VALUE, Constants.CLASSIFIER_KEY, Constants.ANY_VALUE, Constants.CATEGORY_KEY, Constants.PROVIDERS_CATEGORY + "," + Constants.CONSUMERS_CATEGORY, Constants.CHECK_KEY, String.valueOf(false));
 
@@ -265,8 +265,6 @@ public class RegistryContainer implements Container
                 }
                 Map<String, List<URL>> proivderMap = new HashMap<String, List<URL>>();
                 Map<String, List<URL>> consumerMap = new HashMap<String, List<URL>>();
-                LOGGER.info("urls为: " + urls);
-                System.out.println("urls为: " + urls);
                 for (URL url : urls)
                 {
                     LOGGER.info("url为: " + url.getServiceInterface());

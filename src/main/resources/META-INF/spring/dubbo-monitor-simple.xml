@@ -30,17 +30,14 @@ limitations under the License.
 
     <dubbo:application name="${dubbo.application.name}" owner="${dubbo.application.owner}"/>
 
-    <dubbo:registry id="accountRegistry" address="${dubbo.account.registry.address}"/>
-    <dubbo:config-center address="${dubbo.account.config.center.address}"/>
-    <dubbo:metadata-report address="${dubbo.account.metadata.report.address}"/>
-
-    <!-- 多个注册中心 -->
-    <dubbo:registry id="abmUserInfoRegistry" address="${dubbo.abm.registry.address}"/>
+    <dubbo:registry id="accountRegistry" address="${dubbo.registry.address}"/>
+    <dubbo:config-center address="${dubbo.registry.address}"/>
+    <dubbo:metadata-report address="${dubbo.registry.address}"/>
 
     <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}"/>
 
-    <dubbo:service interface="org.apache.dubbo.monitor.MonitorService" ref="monitorService" delay="-1" registry="accountRegistry,abmUserInfoRegistry"/>
+    <dubbo:service interface="org.apache.dubbo.monitor.MonitorService" ref="monitorService" delay="-1"/>
 
-    <dubbo:reference id="registryService" interface="org.apache.dubbo.registry.RegistryService" registry="accountRegistry,abmUserInfoRegistry"/>
+    <dubbo:reference id="registryService" interface="org.apache.dubbo.registry.RegistryService"/>
 
 </beans>

@@ -21,9 +21,9 @@ limitations under the License.
     <groupId>org.apache</groupId>
     <artifactId>dubbo-monitor-simple</artifactId>
     <packaging>jar</packaging>
-    <version>2.7.3</version>
-    <name>dubbo-monitor-2.7.3</name>
-    <description>针对dubbo2.7.3服务的监控</description>
+    <version>2.7.2</version>
+    <name>dubbo-monitor-2.7.2</name>
+    <description>针对dubbo2.7.2服务的监控</description>
 
     <properties>
         <skip_maven_deploy>false</skip_maven_deploy>

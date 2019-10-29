@@ -30,7 +30,7 @@ limitations under the License.
 
     <dubbo:application name="${dubbo.application.name}" owner="${dubbo.application.owner}"/>
 
-    <dubbo:registry id="accountRegistry" address="${dubbo.registry.address}"/>
+    <dubbo:registry address="${dubbo.registry.address}"/>
     <dubbo:config-center address="${dubbo.registry.address}"/>
     <dubbo:metadata-report address="${dubbo.registry.address}"/>
 

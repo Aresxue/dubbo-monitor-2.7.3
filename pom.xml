@@ -88,7 +88,7 @@ limitations under the License.
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.12</version>
+            <version>3.4.14</version>
         </dependency>
     </dependencies>
     <build>
